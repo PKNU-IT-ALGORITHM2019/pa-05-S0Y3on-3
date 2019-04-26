@@ -69,7 +69,8 @@ public class Main {
 				data = kb.next();
 				DeleteallWord(data);
 			}
-			else break;
+			else if(command.equals("exit")) break;
+			else continue;
 		}kb.close();
 	}
 	public static void FindWord(String data) {
@@ -78,7 +79,7 @@ public class Main {
 		}
 		else {
 			TreeNode tmp = bst.searchBST(data);		
-			System.out.println(tmp.cont);
+			System.out.println(tmp.cont.substring(1));
 		}
 	}
 	public static void AddWord(String Name, String Class, String Mean) {
